@@ -90,7 +90,7 @@ search.addEventListener('input', () => {
     let html = "";
 
     notetext.forEach((element, index) => {
-        if (notetitle[index].toLowerCase().includes(search.value) || element.toLowerCase().includes(search.value)) {
+        if (notetitle[index].toLowerCase().includes(searchval) || element.toLowerCase().includes(searchval)) {
             html += `<div class="card my-2 mx-2" style="width: 18rem;">
             <div class="card-body">
             <h5 class="card-title">${notetitle[index]}</h5>
