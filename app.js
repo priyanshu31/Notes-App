@@ -67,17 +67,20 @@ function deletenote(index) {
 
     notetitle = localStorage.getItem("notetitle");
     notetext = localStorage.getItem("notetext");
-    if (notetitle == null)
-        notetext = [], notetitle = [];
+    date = localStorage.getItem("date");
+    if (notetitle == null || notetext == null || date == null)
+        notetext = [], notetitle = [], date = [];
     else
-        notetext = JSON.parse(notetext), notetitle = JSON.parse(notetitle);
+        notetext = JSON.parse(notetext), notetitle = JSON.parse(notetitle), date = JSON.parse(date);
 
     notetitle.splice(index, 1);
     notetext.splice(index, 1);
+    date.splice(index, 1);
 
     localStorage.clear();
     localStorage.setItem('notetitle', JSON.stringify(notetitle));
     localStorage.setItem('notetext', JSON.stringify(notetext));
+    localStorage.setItem('date', JSON.stringify(date));
 
     displaynotes();
 }
