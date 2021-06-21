@@ -52,6 +52,8 @@ function displaynotes() {
           <h5 class="card-title">${notetitle[index]}</h5>
           <p class="card-text">${element}</p>
           <a href="#" id="${index}" onclick = "deletenote(this.id)" class="btn btn-primary">Delete Note</a>
+        </div>
+        </div>
         </div>`;
     });
     
